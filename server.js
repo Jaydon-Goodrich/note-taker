@@ -16,7 +16,7 @@ app.use(express.json());
 app.use('/', htmlRoutes);
 // api routes
 app.use('/api', apiRoutes);
-//
+//static folder to include js and css
 app.use(express.static('public'));
 
 
