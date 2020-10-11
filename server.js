@@ -6,7 +6,19 @@ const PORT = process.env.PORT || 3002;
 
 const app = express();
 
-app.use('*', htmlRoutes);
+//parse incoming string or array data
+app.use(express.urlencoded({ extended: true }));
+
+//parse incoming json data
+app.use(express.json());
+
+//use html routes
+app.use('/', htmlRoutes);
+// api routes
+app.use('/api', apiRoutes);
+//
+app.use(express.static('public'));
+
 
 
 app.listen(PORT, () => {
