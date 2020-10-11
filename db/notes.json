@@ -7,7 +7,8 @@
     },
     {
       "title": "New Note",
-      "text": "This is a test not"
+      "text": "This is a new note",
+      "id": "1"
     }
   ]
 }
